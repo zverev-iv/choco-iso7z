@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>iso7z</id>
+    <version>1.8.4</version>
+    <packageSourceUrl>https://github.com/zverev-iv/choco-iso7z</packageSourceUrl>
+    <owners>zverev-iv</owners>
+    <title>iso7z (Install)</title>
+    <authors>Dec Software</authors>
+    <projectUrl>https://www.tc4shell.com/en/7zip/iso7z/</projectUrl>
+    <copyright>2020 Dec Software</copyright>
+    <licenseUrl>https://www.tc4shell.com/en/termsofuse/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>iso7z 7zip 7-zip zstd archive CCD IMG CDI CHD CSO CUE BIN ECM GDI ISZ MDS MDF NRG Zisofs</tags>
+    <summary>7-Zip with Iso7z can quickly extract files from a disc image without mounting it</summary>
+    <description>Iso7z is a small plugin for the popular 7-Zip archiver. 7-Zip with Iso7z can quickly extract files from a disc image without mounting it. It supports disc images created in different applications.
+List of formats that can be opened in 7-Zip with Iso7z:
+
+- CCD/IMG - disc images created with CloneCD
+- CDI - disc images created with DiscJuggler
+- CHD (v4) - images used by MAME
+- CSO
+- CUE/BIN
+- ECM - disc images compressed with ECM Tool
+- GDI - Dreamcast Gigabyte disc images
+- ISZ - disc images created with UltraISO
+- MDS/MDF - disc images created with Alcohol 120%
+- NRG - disc images created with Nero Burning ROM
+- Zisofs compressed files
+
+The plugin also contains a special codec RawSplitter that enables 7-Zip to efficiently pack uncompressed raw disc images (CCD/IMG, CDI, CUE/BIN, GDI, MDS/MDF, or NRG) into 7z archives. Moreover, RawSplitter can slightly improve the compression of DAT files from Video CD discs (such files are usually named AVSEQxx.DAT and have the RIFF and CDXA signatures at the beginning of the file).
+    </description>
+    <releaseNotes>Current version
+
+Plugin version: 1.8.4
+Distribution package release date: 14 Jul 2020
+    </releaseNotes>
+    <dependencies>
+        <dependency id="7zip.install" version="19.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
